@@ -1,0 +1,84 @@
+# CLion and CMake
+.idea/
+*.iml
+build/
+CMakeLists.txt.user
+cmake-build-*/
+compile_commands.json
+*.cbp
+*.layout
+*.o
+*.a
+*.so
+*.dylib
+*.exe
+*.dll
+*.pdb
+*.suo
+*.user
+*.opensdf
+*.sdf
+*.ipch/
+*.swp
+*.swo
+
+# Qt build files
+*.moc.cpp
+*.qrc.cpp
+*.ui.h
+*.ui.cpp
+
+# Python (PyCharm and virtual environments)
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+develop-eggs/
+lib64/
+parts/
+sdist/
+var/
+pip-log.txt
+pip-delete-this-directory.txt
+.Python
+*.pyc
+*.pyd
+*.DS_Store
+*.log
+*.sqlite
+*.sqlite3
+*.db
+*.bak
+*.orig
+*.swp
+*.swo
+
+# Executables and binaries
+*.exe
+*.dll
+*.so
+*.dylib
+*.app
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+*.orig
+*.cache
+
+# Specific to your project (adjust as needed)
+output.mp4 # if you have a default output file name
+*.srt # if you generate subtitles
