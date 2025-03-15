@@ -26,11 +26,11 @@ static void custom_data_init(CustomData *self) {
 }
 
 gpointer handle_input(gpointer data) {
-    CustomData *custom_data = static_cast<CustomData *>(data);
+    const auto custom_data = static_cast<CustomData *>(data);
     GQueue *data_queue = custom_data->data_queue;
-    gboolean *playing = static_cast<gboolean *>(g_queue_pop_head(data_queue));
-    GstElement *pipeline = static_cast<GstElement *>(g_queue_pop_head(data_queue));
-    int input_fd = *static_cast<int *>(g_queue_pop_head(data_queue));
+    auto *playing = static_cast<gboolean *>(g_queue_pop_head(data_queue));
+    auto *pipeline = static_cast<GstElement *>(g_queue_pop_head(data_queue));
+    const int input_fd = *static_cast<int *>(g_queue_pop_head(data_queue));
 
     char input;
     while (true) {
@@ -112,7 +112,7 @@ int main(int argc, char *argv[]) {
 
     // Main loop for controls
     GMainLoop *loop = g_main_loop_new(nullptr, FALSE);
-    CustomData *custom_data = static_cast<CustomData *>(g_object_new(custom_data_get_type(), NULL));
+    const auto custom_data = static_cast<CustomData *>(g_object_new(custom_data_get_type(), NULL));
     custom_data->main_loop = loop;
     gboolean playing = TRUE;
 
